@@ -19,6 +19,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(IBAction)buttonPressed {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"You clicked button" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    
+    [alert show];
+    
+    NSLog(@"You clicked buttonPressed");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

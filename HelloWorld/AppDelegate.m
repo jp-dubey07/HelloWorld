@@ -14,8 +14,19 @@
 
 @implementation AppDelegate
 
+@synthesize window = _window;
+@synthesize objViewController = _objViewController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.objViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    
+    self.window.rootViewController = self.objViewController;
+
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
